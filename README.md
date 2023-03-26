@@ -1,4 +1,4 @@
-# rtl_cypherapp
+# rtl-cypherapp
 
 rtl cypherapp config
 
