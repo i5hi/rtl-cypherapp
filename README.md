@@ -2,9 +2,17 @@
 
 rtl cypherapp config
 
+## init
+
+```
+git clone https://github.com/i5hi/rtl-cypherapp /path/to/cyphernode/dist/apps/rtl
+cd /path/to/cyphernode/dist/apps/rtl
+```
+
 ## .env
 
 ```
+touch .env
 vi .env
 
 RTL_DATAPATH=/path/to/cyphernode/dist/apps/rtl/data
