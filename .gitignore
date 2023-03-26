@@ -1,0 +1,4 @@
+data/channels-backup
+data/logs
+data/RTL-Config.json
+.env
