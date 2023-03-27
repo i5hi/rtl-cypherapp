@@ -18,7 +18,6 @@ vi .env
 RTL_DATAPATH=/path/to/cyphernode/dist/apps/rtl/data
 BITCOIN_DATAPATH=/path/to/.cyphernode/bitcoin/testnet3
 LIGHTNING_DATAPATH=/path/to/.cyphernode/lightning/testnet
-GATEKEEPER_DATAPATH=/path/to/.cyphernode/gatekeeper
 ```
 
 ## data/RTL-Config.json
