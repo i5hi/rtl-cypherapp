@@ -4,8 +4,8 @@ services:
     container_name: rtl 
     image: shahanafarooqui/rtl:0.12.0
     restart: unless-stopped
-    ports:
-      - "3009:3009"
+    expose:
+      - 3009
     environment:
       PORT: 3009
       HOST: 0.0.0.0
@@ -20,7 +20,7 @@ services:
     labels:
       - traefik.docker.network=cyphernodeappsnet
       - traefik.frontend.redirect.entryPoint=https
-      - traefik.frontend.rule=PathPrefixStrip:/rtl
+      - traefik.frontend.rule=PathPrefix:/rtl
       - traefik.frontend.passHostHeader=true
       - traefik.enable=true
       - traefik.port=3009
@@ -29,11 +29,12 @@ services:
       labels:
         - traefik.docker.network=cyphernodeappsnet
         - traefik.frontend.redirect.entryPoint=https
-        - traefik.frontend.rule=PathPrefixStrip:/rtl
+        - traefik.frontend.rule=PathPrefix:/rtl
         - traefik.frontend.passHostHeader=true
         - traefik.enable=true
         - traefik.port=3009
         - traefik.frontend.auth.basic.usersFile=/htpasswd/htpasswd
+
       replicas: 1
       placement:
         constraints:
